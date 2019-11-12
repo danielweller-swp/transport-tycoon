@@ -1,8 +1,15 @@
-## A mathematical solution to Exercise 1
+## A mathematical approach to Exercise 1
 
-This solution to the exercise is based on the observation
-that "doing the As first, and then doing the Bs" ought to
-be optimal in most cases (formal proof forthcoming ;-)).
+**Note:** This is not a solution to exercise 1 since the
+problem statement requires to move the containers in the exact
+sequence given.
+
+Looking a more lenient version of exercise 1, where we
+may move the container in any order and seek to minimize
+the total time it takes to move all containers to their
+destination, we observe that "doing the As first, and 
+then doing the Bs" ought to be optimal in most cases
+(formal proof forthcoming ;-)).
 
 The edge cases seem to be (where `numAs` and `numBs` denote
 the number of `A`s and number of `B`s in the problem, respectively):
@@ -28,13 +35,3 @@ ABB: 7
 AABABBAB: 29
 ```
 
-### Bonus points
-
-> What is the possible reason for the different solutions to return different answers?
-
-Which container is picked up at the factory is non-deterministic. This can lead
-to differences in time taken for the same set of containers.
-
-Consider
-- `ABB`: this takes 7.
-- `BBA`: this takes 15.
